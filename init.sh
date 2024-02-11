@@ -18,6 +18,5 @@ case $WGUI_MANAGE_RESTART in (1|t|T|true|True|TRUE)
     done &
 esac
 
-
-./wg-ui &
+runuser -p -u wgui -- ./wg-ui &
 wait $!
