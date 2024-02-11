@@ -61,7 +61,7 @@ FROM alpine:3.19
 RUN addgroup -S wgui && \
     adduser -S -D -G wgui wgui
 
-RUN apk --no-cache add ca-certificates wireguard-tools jq iptables
+RUN apk --no-cache add ca-certificates wireguard-tools jq iptables runuser
 
 WORKDIR /app
 
